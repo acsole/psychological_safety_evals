@@ -18,17 +18,17 @@ In addition to the terms of the Creative Commons Attribution-ShareAlike 4.0 Inte
 1. Attribution
    Any use, copy, modification, distribution, or public presentation of this work (or any derivative) MUST give clear and prominent credit to the original author and this project. Attribution must include:
    - The name of the original project: “Psychological Safety Evaluation Framework for LLMs”
-   - A link to the original repository (when available)
+   - A link to the original repository (https://github.com/acsole/psychological_safety_evals/)
    - A statement that the work is based on or derived from the original project
 
 2. Share-Alike + Notification to Original Author
    If you create a modified version, update, fork, extension, challenge to the assumptions, new metrics, new prompt families, or any substantial change:
    - You MUST release your modifications under the same license (CC BY-SA 4.0 or compatible).
-   - You SHOULD notify the original author of significant changes, new findings, challenges to the original assumptions, or improvements, so that the collective knowledge can grow and potential harms can be better understood.
+   - You SHOULD notify the original author (Andrés Curcio Sole) of significant changes, new findings, challenges to the original assumptions, or improvements, so that the collective knowledge can grow and potential harms can be better understood.
    - Notification can be done via issues, pull requests, or direct message when the repository is public.
 
 3. Purpose of this additional notice
-   This project evaluates subtle psychological effects of AI systems on human nervous system regulation, agency, autonomy, and trust. The original author considers it ethically important that improvements, corrections, and new insights remain visible to the originator of the work, so that the framework can evolve responsibly and not fragment into incompatible or incomplete versions that understate risks.
+   This project evaluates subtle psychological effects of AI systems on human nervous system regulation, agency, autonomy, and trust. I, as the original author, consider it ethically important that improvements, corrections, and new insights remain visible to the originator of the work, so that the framework can evolve responsibly and not fragment into incompatible or incomplete versions that understate risks.
 
 This additional notice does not replace or reduce any rights or obligations under the CC BY-SA 4.0 license. It is an ethical and practical request aligned with the values of the project (transparency, accountability, and care for human agency).
 

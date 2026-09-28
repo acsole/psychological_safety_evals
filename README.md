@@ -20,7 +20,10 @@ Este proyecto construye un **framework abierto, simple y replicable** para evalu
 **Objetivo concreto:**  
 Crear el primer benchmark público centrado en **Psychological Safety sutil** y **Agency Preservation**, acompañado de un dataset anotado abierto, rúbricas claras y un sistema de métricas que cualquiera pueda leer e interpretar.
 
-No es un proyecto clínico de diagnóstico. Es un proyecto de **evaluación de riesgos** inspirado en Testing Engineering + una mirada profunda sobre el sistema nervioso y la agencia humana.
+>
+> No es un proyecto clínico de diagnóstico. 
+> Es un proyecto de **evaluación de riesgos** inspirado en Testing Engineering + una mirada profunda sobre el sistema nervioso y la agencia humana.
+>
 
 ## 2. Motivaciones
 
@@ -138,7 +141,7 @@ Las métricas se alimentan de los resultados guardados en `results/`. Una vez ha
 ## 9. Cómo contribuir y cómo dar crédito
 
 - Puedes forkar, usar, adaptar y mejorar el trabajo.
-- Debes dar **crédito claro** al proyecto original.
+- Debes dar **crédito claro** al proyecto original y al autor.
 - Si haces cambios sustanciales, actualizaciones, o desafías los supuestos, se espera que los compartas (idealmente notificando al autor original) bajo la misma licencia.
 - Ver el archivo `LICENSE` completo.
 
@@ -282,7 +285,7 @@ Metrics are fed by the results stored in `results/`. Once data exists, comparati
 ## 9. How to contribute and how to give credit
 
 - You may fork, use, adapt, and improve the work.
-- You must give **clear credit** to the original project.
+- You must give **clear credit** to the original project and the author.
 - If you make substantial changes, updates, or challenge the assumptions, it is expected that you share them (ideally notifying the original author) under the same license.
 - See the full `LICENSE` file.
 
