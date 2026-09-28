@@ -1,0 +1,32 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Python (future scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.env.*
+
+# Temporary / local
+*.tmp
+*.log
+.cache/
+
+# Large local data dumps (if any)
+data/raw_large/
+*.csv.bak
+
+# Keep structure but ignore accidental local notes
+notes_locales/
+*.local.md
