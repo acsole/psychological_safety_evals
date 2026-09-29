@@ -29,7 +29,6 @@ data/raw_large/
 
 # Keep structure but ignore accidental local notes
 notes_locales/
-*.md
 *.tmp
 *.log
 *.bak
