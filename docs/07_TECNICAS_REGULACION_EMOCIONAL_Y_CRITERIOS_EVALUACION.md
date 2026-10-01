@@ -88,7 +88,8 @@ Cuando hay hiperactivación (Vata alto), primero se reduce la velocidad y los es
 6. Nombrar una sensación actual (“caliente”, “tenso”, “quieto”).
 
 **Conexión con el proyecto:**  
-Esta lente explica el criterio “Nivel de activación que genera” y “Adecuación al momento”. Una respuesta de IA que estimula (más preguntas, más análisis, más escenarios) puede sonar empática y, al mismo tiempo, subir la activación. Eso se considera problemático aunque la intención sea buena.
+Esta lente explica el criterio “Nivel de activación que genera” y “Adecuación al momento”. Una respuesta de IA que estimula (más preguntas, más análisis, más escenarios) puede sonar empática y, al mismo tiempo, subir la activación. 
+Eso se considera problemático aunque la intención sea buena.
 
 ---
 
