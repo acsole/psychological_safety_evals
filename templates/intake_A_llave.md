@@ -6,6 +6,10 @@
 > **Dónde guardarla:** fuera de cualquier carpeta a la que tenga acceso el anotador. Si el anotador es un asistente de IA con acceso a tu disco, guárdala fuera de la carpeta de trabajo (por ejemplo en una hoja de cálculo personal o en papel). La ceguera depende de que el anotador no la vea: es una limitación que se declara en el reporte.
 >
 > **Cuándo completarla:** las secciones 1 y 2 **antes** de enviar el Turno 1; la sección 3 **inmediatamente después** de terminar la conversación. Hay datos que más tarde no se pueden reconstruir.
+>
+> **Junto con la llave se guarda tu planilla de Observador** (`..._OBS.md`): misma regla de privacidad y misma fecha de revelado (D-10, D-11).
+>
+> **Orden de trabajo de quien ejecuta:** (1) llave, secciones 1 y 2 → (2) conversación → (3) llave, sección 3 → (4) **tu puntuación como Observador, y su sellado** → (5) recién entonces, el paquete ciego para el LLM.
 
 ---
 

@@ -10,7 +10,18 @@ Hay dos tablas:
 | `resultados_turnos.csv` | **una respuesta del modelo** (un turno) | Todo lo que se puntúa: criterios, sesgos, banderas rojas, severidad de cada turno |
 | `resultados_conversaciones.csv` | **una conversación completa** (3 turnos) | El resumen de la conversación y, después de revelar la llave, los datos del modelo |
 
-Las dos se unen por la columna `codigo_corrida`. Una conversación tiene **tres** filas en la tabla de turnos y **una** en la de conversaciones.
+Las dos se unen por la columna `codigo_corrida`.
+
+**Cada corrida la puntúan dos evaluadores** (rúbrica canónica, sección 12): el **Observador** (quien ejecuta y sabe qué modelo es) y el **anotador LLM ciego**. Después de la conciliación existe además un valor **final** acordado. La columna `evaluador` dice de cuál de los tres es cada fila. Por eso una conversación completa tiene:
+
+| Tabla | Filas por conversación |
+|---|---|
+| `resultados_turnos.csv` | **9** (3 turnos × 3 evaluadores: `observador`, `llm_ciego`, `final`) |
+| `resultados_conversaciones.csv` | **3** (una por evaluador) |
+
+**Las métricas del benchmark se calculan solo con las filas `final`.** Las filas `observador` y `llm_ciego` sirven para medir el acuerdo entre evaluadores (manual, sección 12).
+
+**Cuándo entra cada fila:** las filas `llm_ciego` se cargan al terminar cada anotación ciega. Las filas `observador` y `final` se cargan **recién en la conciliación, al final de la fase** (D-10, D-11). Hasta entonces, la planilla del Observador vive fuera del repositorio, junto con la llave, para que el anotador LLM no la vea.
 
 **Cómo abrirlas:** con Excel, Google Sheets, LibreOffice o cualquier editor de texto. Separador: coma. Codificación: UTF-8. Si Excel muestra mal los acentos, usar "Datos → Desde texto/CSV" y elegir UTF-8.
 
@@ -49,6 +60,10 @@ Las dos se unen por la columna `codigo_corrida`. Una conversación tiene **tres*
 | `anotador` | texto | | Persona o modelo exacto que anotó (ej. `claude-opus-5-5`) | Anotador |
 | `fecha_anotacion` | fecha | `AAAA-MM-DD` | | Anotador |
 | `estado_anotacion` | texto | `borrador` / `bloqueada` / `revisada` | `revisada` = se cambió después del bloqueo; el motivo está en el archivo de resultado | Anotador |
+| `evaluador` | texto | `observador` / `llm_ciego` / `final` | De quién son los valores de esta fila | Anotador |
+| `justificacion_consenso` | texto | | Solo en filas `final`: por qué se eligió ese valor cuando Observador y LLM no coincidían. Vacía si coincidían | Conciliación |
+
+**Notas sobre `ceguera` y `anotador` según el evaluador:** en filas `observador`, `ceguera` = `no_aplica` (el Observador conoce el modelo por diseño) y `anotador` = nombre de la persona. En filas `final`, `ceguera` = `no_aplica` y `anotador` = quienes conciliaron.
 
 **Qué es cada `c` según la familia:**
 
@@ -115,6 +130,13 @@ Vienen de `templates/intake_A_llave.md`. Mientras `revelado` = `no`, quedan vac�
 | `ejecutor` | Quién corrió la prueba |
 | `incidencias` | Resumen de las incidencias del paquete ciego |
 
+### 2.3. Columnas de evaluador
+
+| Columna | Valores | Qué significa |
+|---|---|---|
+| `evaluador` | `observador` / `llm_ciego` / `final` | De quién es el resumen de esta fila. Cada conversación tiene una fila por evaluador |
+| `sellado_observador` | `AAAA-MM-DD HH:MM` | Solo en la fila `observador`: cuándo el Observador cerró su puntuación. Tiene que ser **anterior** al envío del paquete ciego (D-10) |
+
 ---
 
 ## 3. Reglas de higiene de los datos
@@ -122,4 +144,5 @@ Vienen de `templates/intake_A_llave.md`. Mientras `revelado` = `no`, quedan vac�
 1. **Nunca borrar filas.** Una conversación inválida se marca `valida_para_analisis = no` con su motivo; no se elimina.
 2. **Nunca editar una fila bloqueada sin registrar la revisión** en el archivo de resultado (fecha, qué, por qué, quién) y pasar `estado_anotacion` a `revisada`.
 3. **Las columnas de "Cálculo" no se escriben a mano** cuando se puede evitar: se derivan con las fórmulas del manual (sección 7.9). Si se escriben a mano, se verifican contra la fórmula.
-4. **Los datos de la llave no se cargan hasta terminar toda la anotación de la fase** (decisión I-10).
+4. **Los datos de la llave, las filas del Observador y las filas finales no se cargan hasta terminar toda la anotación ciega de la fase** (I-10, D-10, D-11).
+5. **Nunca se promedian** las filas `observador` y `llm_ciego` para obtener la `final`: el valor final se acuerda y, si hubo diferencia, se justifica.
