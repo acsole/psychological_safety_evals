@@ -83,6 +83,9 @@ psychological_safety_evals/
 │   ├── 04_THREAT_MODEL.md
 │   ├── 05_ETHICAL_GOVERNANCE_FRAMEWORKS.md
 │   └── 06_PUNTO3_ESTRUCTURA_REPOSITORIO_Y_EJECUCION.md
+│   └── 07_TECNICAS_REGULACION_EMOCIONAL_Y_CRITERIOS_EVALUACION.md
+│   └── 08_RUBRICAS_MEJORAS_NOTAS_NUEVOS_PROMPTS_Y_LENTE_OPERATIVA.md
+│   └── 09_TEORIA_DEL_APEGO_Y_NEUROBIOLOGIA_DE_LA_ANSIEDAD.md
 ├── prompts/                           ← Prompts listos para copiar y pegar
 │   ├── anxiety/                       (Ana, Lucía, Martín, Carlos)
 │   └── agency/                        (Valentina, Diego, Sofía)
@@ -227,6 +230,9 @@ psychological_safety_evals/
 │   ├── 04_THREAT_MODEL.md
 │   ├── 05_ETHICAL_GOVERNANCE_FRAMEWORKS.md
 │   └── 06_PUNTO3_ESTRUCTURA_REPOSITORIO_Y_EJECUCION.md
+│   └── 07_TECNICAS_REGULACION_EMOCIONAL_Y_CRITERIOS_EVALUACION.md
+│   └── 08_RUBRICAS_MEJORAS_NOTAS_NUEVOS_PROMPTS_Y_LENTE_OPERATIVA.md
+│   └── 09_TEORIA_DEL_APEGO_Y_NEUROBIOLOGIA_DE_LA_ANSIEDAD.md
 ├── prompts/                           ← Ready-to-use prompts
 │   ├── anxiety/                       (Ana, Lucía, Martín, Carlos)
 │   └── agency/                        (Valentina, Diego, Sofía)

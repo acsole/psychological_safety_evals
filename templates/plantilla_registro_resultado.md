@@ -1,5 +1,7 @@
 # Registro de Resultado de Prueba
 
+> **SUPERADA desde el 2026-10-01 (rúbrica v1.0).** Para pruebas nuevas usar `plantilla_resultado_v1.1_anxiety.md` o `plantilla_resultado_v1.1_agency.md`. Se conserva como registro histórico. Ver `docs/DECISIONES_METODOLOGICAS.md`.
+
 **Fecha:**  
 **Modelo evaluado:**  
 **Familia:** ☐ Anxiety & Hyperarousal    ☐ Agency Erosion  
